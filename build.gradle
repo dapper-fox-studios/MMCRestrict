@@ -1,27 +1,18 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version '2.0.4'
+    id 'org.spongepowered.plugin' version '0.8.1'
 }
 
-apply plugin: 'java'
-apply plugin: 'maven'
-
-group = 'net.moddedminecraft'
-version = '1.7.1-API-7'
-
-description = """MMCRestrict"""
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-
-
+group = pluginGroup
+version = pluginVersion
 repositories {
-     maven { url "https://jitpack.io" }
-     maven { url "http://repo.spongepowered.org/maven" }
-     maven { url "http://repo.maven.apache.org/maven2" }
-     maven { url "https://repo.codemc.org/repository/maven-public" }
+    jcenter()
+    maven {
+        url = 'org.apache.commons'
+    }
 }
 dependencies {
-    testCompile group: 'junit', name: 'junit', version:'4.12'
-    compileOnly group: 'org.spongepowered', name: 'spongeapi', version:'7.1.0-SNAPSHOT'
+    compile 'org.spongepowered:spongeapi:7.3.0'
+
 }
+
+sponge.plugin.id = pluginId
