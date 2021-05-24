@@ -386,7 +386,7 @@ public class EventListener {
                     if (!banType.equalsIgnoreCase("own")) {
                         plugin.notifyOnlineStaff(plugin.fromLegacy("&8[&6MMCRestrict&8] &c" + player.getName() + " tried to " + banType.toLowerCase() + " " + itemID));
                     }
-                    player.sendMessage(plugin.fromLegacy("&c" + mod.getModname() + " Shouldn't be placed directly. Please place item using the Structurize/MineColonies Building Tool" + reason));
+                    player.sendMessage(plugin.fromLegacy("&c" + mod.getModname() + " has been disabled due to a bug with items. We're looking into the issue and hope to have a replacement/or fix soon." + reason));
                     checkInventory(player);
                     return true;
                 }
@@ -410,7 +410,7 @@ public class EventListener {
                     if (!banType.equalsIgnoreCase("own")) {
                         plugin.notifyOnlineStaff(plugin.fromLegacy("&8[&6MMCRestrict&8] &c" + player.getName() + " tried to " + banType.toLowerCase() + " " + item.getItemname()));
                     }
-                    player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " Shouldn't be placed directly. Please place item using the Structurize/MineColonies Building Tool" + reason));
+                    player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " has been disabled due to a bug with items. We're looking into the issue and hope to have a replacement/or fix soon." + reason));
                     checkInventory(player);
                     return true;
                 }
@@ -444,7 +444,7 @@ public class EventListener {
                     if (!banType.equalsIgnoreCase("own")) {
                         plugin.notifyOnlineStaff(plugin.fromLegacy("&8[&6MMCRestrict&8] &c" + player.getName() + " tried to " + banType.toLowerCase() + " " + itemID));
                     }
-                    player.sendMessage(plugin.fromLegacy("&c" + mod.getModname() + " Shouldn't be placed directly. Please place item using the Structurize/MineColonies Building Tool" + reason));
+                    player.sendMessage(plugin.fromLegacy("&c" + mod.getModname() + " has been disabled due to a bug with items. We're looking into the issue and hope to have a replacement/or fix soon." + reason));
                     checkInventory(player);
                     return true;
                 }
@@ -488,7 +488,7 @@ public class EventListener {
                         if (!banType.equalsIgnoreCase("own")) {
                             plugin.notifyOnlineStaff(plugin.fromLegacy("&8[&6MMCRestrict&8] &c" + player.getName() + " tried to " + banType.toLowerCase() + " " + item.getItemname()));
                         }
-                        player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " Shouldn't be placed directly. Please place item using the Structurize/MineColonies Building Tool" + reason));
+                        player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " has been disabled due to a bug with items. We're looking into the issue and hope to have a replacement/or fix soon." + reason));
                         Task.builder().execute(runnable -> checkInventory(player)).delay(250, TimeUnit.MILLISECONDS).name("mmcrestrict-s-checkInventory-isBanned").submit(plugin);
                         return true;
                     }
@@ -527,7 +527,7 @@ public class EventListener {
                                 reason = " &3- &7" + item.getBanreason();
                             }
                             plugin.logToFile("action-log", item.getItemname()+ " was removed from " +player.getName()+ "'s inventory");
-                            player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " Shouldn't be placed directly. Please place item using the Structurize/MineColonies Building Tool" + reason));
+                            player.sendMessage(plugin.fromLegacy("&c" + item.getItemname() + " has been disabled due to a bug with items. We're looking into the issue and hope to have a replacement/or fix soon." + reason));
                         }
                     }
                 }
